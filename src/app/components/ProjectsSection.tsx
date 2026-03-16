@@ -4,13 +4,13 @@ const projects: Project[] = [
   {
     id: 'p1',
     index: '001',
-    title: 'Dashboard Analytics Platform',
+    title: 'C# Fundamentals & Database Integration',
     description:
-      'Full-stack analytics dashboard with real-time data visualization, user auth, and a RESTful API backend. Designed end-to-end in Figma before implementation.',
+      'C# coursework covering object-oriented programming, Windows Forms UI development, and database integration.',
     image: 'https://images.unsplash.com/photo-1737505598998-693328b57ae3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkYXJrJTIwbWluaW1hbCUyMGNvZGUlMjBkZXZlbG9wZXIlMjB3b3Jrc3BhY2UlMjBtb25vY2hyb21lfGVufDF8fHx8MTc3MzUzMjQ3NXww&ixlib=rb-4.1.0&q=80&w=1080',
-    tags: ['React', 'Node.js', 'Express', 'SQLite', 'Figma'],
-    liveUrl: 'https://github.com/JakeRyanPlatt',
-    repoUrl: 'https://github.com/JakeRyanPlatt',
+    tags: ['C#', 'OOP', 'SQL', '.NET'],
+    liveUrl: 'https://github.com/JakeRyanPlatt/SE245Csharp',
+    repoUrl: 'https://github.com/JakeRyanPlatt/SE245Csharp',
   },
   {
     id: 'p2',

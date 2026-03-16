@@ -4,7 +4,7 @@ export interface Skill {
   id: string;
   name: string;
   level: SkillLevel;
-  category: 'design' | 'frontend' | 'backend' | 'database' | 'tools';
+  category: 'languages' | 'frontend' | 'backend' | 'database' | 'tools'| 'networking'|'systems'| 'cloud'| 'security';
 }
 
 interface SkillsBadgeProps {
@@ -57,28 +57,52 @@ export function SkillsBadge({ skill }: SkillsBadgeProps) {
 /* ─── Skills Section ─────────────────────────────────────────── */
 
 const skills: Skill[] = [
-  { id: 's1',  name: 'Figma',       level: 'expert',       category: 'design' },
-  { id: 's2',  name: 'React',       level: 'expert',       category: 'frontend' },
-  { id: 's3',  name: 'JavaScript',  level: 'expert',       category: 'frontend' },
-  { id: 's4',  name: 'TypeScript',  level: 'advanced',     category: 'frontend' },
-  { id: 's5',  name: 'HTML / CSS',  level: 'expert',       category: 'frontend' },
-  { id: 's6',  name: 'Tailwind',    level: 'advanced',     category: 'frontend' },
-  { id: 's7',  name: 'Node.js',     level: 'advanced',     category: 'backend' },
-  { id: 's8',  name: 'Express',     level: 'advanced',     category: 'backend' },
-  { id: 's9',  name: 'REST APIs',   level: 'advanced',     category: 'backend' },
-  { id: 's10', name: 'SQLite',      level: 'advanced',     category: 'database' },
-  { id: 's11', name: 'SQL',         level: 'advanced',     category: 'database' },
-  { id: 's12', name: 'Git',         level: 'advanced',     category: 'tools' },
+  // Languages
+  { id: 's1',  name: 'C',           level: 'intermediate',  category: 'languages' },
+  { id: 's2',  name: 'C#',          level: 'intermediate',  category: 'languages' },
+  { id: 's3',  name: 'Python',      level: 'intermediate',  category: 'languages' },
+  { id: 's4',  name: 'JavaScript',  level: 'intermediate',  category: 'languages' },
+  { id: 's5',  name: 'HTML / CSS',  level: 'intermediate',  category: 'languages' },
+  { id: 's6',  name: 'PowerShell',  level: 'intermediate',  category: 'languages' },
+
+  // Networking
+  { id: 's7',  name: 'TCP/IP',          level: 'advanced',      category: 'networking' },
+  { id: 's8',  name: 'DNS / DHCP',      level: 'advanced',      category: 'networking' },
+  { id: 's9',  name: 'VPN',             level: 'intermediate',  category: 'networking' },
+  { id: 's10', name: 'Routing & Switching', level: 'intermediate', category: 'networking' },
+  { id: 's11', name: 'Wireshark',       level: 'intermediate',  category: 'networking' },
+  { id: 's12', name: 'Cisco / Packet Tracer', level: 'intermediate', category: 'networking' },
+
+  // Systems & Embedded
+  { id: 's13', name: 'Microcontrollers', level: 'beginner',     category: 'systems' },
+  { id: 's14', name: 'Linux (Ubuntu/Kali)', level: 'intermediate', category: 'systems' },
+  { id: 's15', name: 'Windows Server', level: 'advanced',       category: 'systems' },
+  { id: 's16', name: 'Active Directory', level: 'advanced',     category: 'systems' },
+
+  // Cloud & Virtualization
+  { id: 's17', name: 'Azure',        level: 'intermediate',     category: 'cloud' },
+  { id: 's18', name: 'VMware vSphere', level: 'intermediate',   category: 'cloud' },
+  { id: 's19', name: 'Hyper-V',      level: 'intermediate',     category: 'cloud' },
+
+  // Security
+  { id: 's20', name: 'Cybersecurity', level: 'intermediate',    category: 'security' },
+  { id: 's21', name: 'Firewall Management', level: 'intermediate', category: 'security' },
+  { id: 's22', name: 'IoT Security', level: 'beginner',         category: 'security' },
+
+  // Tools
+  { id: 's23', name: 'Git',          level: 'intermediate',     category: 'tools' },
+  { id: 's24', name: 'SQL',          level: 'intermediate',     category: 'tools' },
+  { id: 's25', name: 'Remote Desktop', level: 'advanced',       category: 'tools' },
 ];
 
 const categoryMeta: { key: string; label: string }[] = [
-  { key: 'design',   label: 'Design' },
-  { key: 'frontend', label: 'Frontend' },
-  { key: 'backend',  label: 'Backend' },
-  { key: 'database', label: 'Database' },
-  { key: 'tools',    label: 'Tools' },
+  { key: 'languages',  label: 'Languages' },
+  { key: 'networking', label: 'Networking' },
+  { key: 'systems',    label: 'Systems & Embedded' },
+  { key: 'cloud',      label: 'Cloud & Virtualization' },
+  { key: 'security',   label: 'Security' },
+  { key: 'tools',      label: 'Tools' },
 ];
-
 export function SkillsSection() {
   const grouped = categoryMeta
     .map(({ key, label }) => ({
